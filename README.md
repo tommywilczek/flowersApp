@@ -1,10 +1,12 @@
 # FlowersApp
 
+The FlowersApp is a simple CRUD Angular App that connects to a Mongo database. It is an exercise in following best practices used in modern, professional development teams.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.2.2.
 
 ## Best Practices
 
-This project is an exercise of using the following practices:
+This project uses the following practices:
 
 - Version control *committing early and often!*
 - Continuous integration *using TravisCI*
