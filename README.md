@@ -2,13 +2,22 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.2.2.
 
+## Best Practices
+
+This project is an exercise of using the following practices:
+
+- Version control *committing early and often!*
+- Continuous integration *using TravisCI*
+- Trunk-based development
+- **Test Driven Development**
+  - Using Karma
+  - Tests can be run extremely frequently and reliably
+- Loosely coupled architecture
+  - There is an abstraction layer between the database and the UI
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
 ## Build
 
