@@ -9,7 +9,8 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 This project uses the following practices:
 
 - Version control *committing early and often!*
-- Continuous integration *using TravisCI*
+- Continuous integration
+  - Whenever code is pushed to github, TravisCI runs an automated build, lint, and test
 - Trunk-based development
 - **Test Driven Development**
   - Using Karma
