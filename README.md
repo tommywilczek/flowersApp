@@ -14,11 +14,14 @@ This project uses the following practices:
 - Trunk-based development
 - **Test Driven Development**
   - Using Karma
+  - Using Mocha (JavaScript testing framework) and Chai (assertion library) for isolated MongoDB tess
   - Tests can be run extremely frequently and reliably
 - Loosely coupled architecture
   - There is an abstraction layer between the database and the UI
 
-## Development server
+## Up and Running
+
+Serve the Mongo Database by using the command `mongod`
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
