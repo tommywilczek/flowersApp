@@ -10,11 +10,11 @@ This project uses the following practices:
 
 - Version control *committing early and often!*
 - Continuous integration
-  - Whenever code is pushed to github, TravisCI runs an automated build, lint, and test
+  - Whenever code is pushed to github, TravisCI is configured to run an automated build, lint, and test
 - Trunk-based development
 - **Test Driven Development**
   - Using Karma
-  - Using Mocha (JavaScript testing framework) and Chai (assertion library) for isolated MongoDB tess
+  - Using Mocha (JavaScript testing framework) and Chai (assertion library) for isolated MongoDB tests
   - Tests can be run extremely frequently and reliably
 - Loosely coupled architecture
   - There is an abstraction layer between the database and the UI
