@@ -8,8 +8,13 @@ router.get('/', (req, res, next) => {
 });
 
 router.post('/', (req, res, next) => {
+    const newFlower = {
+        name: req.body.name,
+        price: req.body.price
+    }
     res.status(201).json({
-        message: 'Handling POST Requests to /flowers'
+        message: 'Handling POST Requests to /flowers',
+        createdFlower: newFlower 
     });
 });
 
