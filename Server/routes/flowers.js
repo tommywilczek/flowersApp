@@ -57,10 +57,33 @@ router.get('/:flowerId', (req, res, next) => {
 }); 
 
 router.patch('/:flowerId', (req, res, next) => {
-    res.status(200).json({
-        message: 'Updated product!'
+    const id = req.params.flowerId // extract the ID from the URL (the :flowerId)
+    const updateOps = {};
+    for(const ops of req.body) {
+        updateOps[ops.propName] = ops.value;
+    }
+    Flower.update({ _id: id }, { $set: updateOps}) // $set is a Mongoose thing
+    .exec()
+    .then(result => {
+        console.log(result);
+        res.status(200).json(result);
+    })
+    .catch(err => {
+        console.log(err);
+        res.status(500).json({
+            error: err
+        });
     });
 });
+
+// NOTES FOR PATCH: 
+// The request has to be given an array that looks like this:
+// [
+// 	{
+//     	"propName": "name",
+//     	"value:": "thorny rose"
+// 	}
+// ]
 
 router.delete('/:flowerId', (req, res, next) => {
     const id = req.params.flowerId

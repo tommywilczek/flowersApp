@@ -23,10 +23,10 @@ mongoose.connection
 //     }); 
 // });
 
-afterEach(() => {
-  // mongoose.connection.collections['flowers'].drop()
-  mongoose.connection.db.dropDatabase();
-});
+// afterEach(() => {
+//   // mongoose.connection.collections['flowers'].drop()
+//   mongoose.connection.db.dropDatabase();
+// }); 
 
 describe('Create', () => {
   it('creates a flower', (done) => {
