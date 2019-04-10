@@ -4,7 +4,7 @@ const flowersSchema = mongoose.Schema({
     _id: mongoose.Schema.Types.ObjectId,
     name: String,
     price: Number,
-    any: {}
+    extraFields: {}
 });
 
 module.exports = mongoose.model('Flower', flowersSchema);

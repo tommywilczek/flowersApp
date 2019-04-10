@@ -24,7 +24,7 @@ router.post('/', (req, res, next) => {
         _id: new mongoose.Types.ObjectId(),
         name: req.body.name,
         price: req.body.price,
-        any: req.body.any
+        extraFields: req.body.extraFields
     });
     newFlower
         .save()
@@ -73,15 +73,6 @@ router.patch('/:flowerId', (req, res, next) => {
         });
     });
 });
-
-// NOTES FOR PATCH: 
-// The request has to be given an array that looks like this:
-// [
-// 	{
-//     	"propName": "name",
-//     	"value": "thorny rose"
-// 	}
-// ]
 
 router.delete('/:flowerId', (req, res, next) => {
     const id = req.params.flowerId

@@ -6,10 +6,12 @@ import { AllMaterialModule } from './material-module';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { ShowFlowersComponent } from './show-flowers/show-flowers.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ShowFlowersComponent
   ],
   imports: [
     BrowserModule,
