@@ -8,14 +8,14 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 This project uses the following practices:
 
+- Test and Behavior Driven Development
+  - Using Karma and Jasmine for Angular front-end
+  - Using Mocha (JavaScript testing framework) and Chai (assertion library) for isolated MongoDB tests
+  - Test suite listens to changes in files and runs each time a file is saved
 - Version control *committing early and often!*
 - Continuous integration
   - Whenever code is pushed to github, TravisCI is configured to run an automated build, lint, and test
 - Trunk-based development
-- **Test Driven Development**
-  - Using Karma
-  - Using Mocha (JavaScript testing framework) and Chai (assertion library) for isolated MongoDB tests
-  - Tests can be run extremely frequently and reliably
 - Loosely coupled architecture
   - There is an abstraction layer between the database and the UI
 
@@ -44,7 +44,7 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 Mongo Atlas is Mongo's cloud database. The Flowers database is managed through Mongo Atlas and hosted on AWS. 
 
 ![mongo dashboard](pictures/mongoAtlasDashboard.png)
-*Mongo Atlas has interesting analytics about the usage of the used database*
+*Mongo Atlas provides analytics about the usage of the database*
 
 ### Mongoose
 
