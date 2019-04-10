@@ -368,6 +368,8 @@ MIT
 @angular/router
 MIT
 
+@angular/material/icon
+
 zone.js
 MIT
 The MIT License
