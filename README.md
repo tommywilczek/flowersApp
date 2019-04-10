@@ -39,6 +39,10 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
+## Dynamic Data
+
+Dynamic fields can be added to the Mongo database because Mongo's `Mixed` schema type allows fields to be added on the fly.
+
 ## The Database
 
 Mongo Atlas is Mongo's cloud database. The Flowers database is managed through Mongo Atlas and hosted on AWS. 
