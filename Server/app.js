@@ -1,3 +1,6 @@
-module.exports = function(){
-    return 'hello';
+
+module.exports = {
+    myFunction: function(variable) {
+        return(variable);
+    }
 }

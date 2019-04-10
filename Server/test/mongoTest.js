@@ -5,29 +5,50 @@ const Schema = mongoose.Schema;
 const chai = require('chai');
 const expect = chai.expect;
 
-// Create a new schema that accepts a 'name' object.
-// 'name' is a required field
-const testSchema = new Schema({
-    name: { type: String, required: true }
+const flowersModel = require('../models/flowers');
+
+//tell mongoose to use es6 implementation of promises
+mongoose.Promise = global.Promise;
+mongoose.connect('mongodb://localhost/flowersMongoTest'); 
+mongoose.connection
+    .once('open', () => console.log('Connected!'))
+    .on('error', (error) => {
+        console.warn('Error : ',error);
+    });
+//Called hooks which runs before something.
+// beforeEach((done) => {
+//     mongoose.connection.collections.mongoTestSuite.drop(() => {
+//          //this function runs after the drop is completed
+//         done(); //go ahead everything is done now.
+//     }); 
+// });
+
+afterEach(() => {
+  // mongoose.connection.collections['flowers'].drop()
+  mongoose.connection.db.dropDatabase();
+});
+
+describe('Create', () => {
+  it('creates a flower', (done) => {
+    const newFlower = new flowersModel({ name: 'Bluebonnet'});
+    newFlower.save()
+              .then(() => {
+                assert(!newFlower.isNew);
+                done();
+              });
   });
-  //Create a new collection called 'Name'
-  const Name = mongoose.model('Name', testSchema);
-  describe('Database Tests', function() {
-    //Before starting the test, create a sandboxed database connection
-    //Once a connection is established invoke done()
-    before(function (done) {
-      mongoose.connect('mongodb://localhost/testDatabase');
-      const db = mongoose.connection;
-      db.on('error', console.error.bind(console, 'connection error'));
-      db.once('open', function() {
-        console.log('We are connected to test database!');
+});
+
+describe('Read', () => {
+
+  it('finds a flower with the name `testFlower`', (done) => {
+    const newFlower = new flowersModel({ name: 'testFlower'});
+    newFlower.save()
+    flowersModel.findOne( {name: 'testFlower'} )
+      .then(() => {
+        assert(newFlower.name === 'testFlower');
         done();
       });
-    });
-    //After all tests are finished drop database and close connection
-    after(function(done){
-      mongoose.connection.db.dropDatabase(function(){
-        mongoose.connection.close(done);
-      });
-    });
   });
+});
+
