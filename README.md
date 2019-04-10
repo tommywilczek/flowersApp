@@ -23,7 +23,13 @@ This project uses the following practices:
 
 Serve the Mongo Database by using the command `mongod`
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+In a new terminal, run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+
+In a new terminal, run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+
+In a new terminal, run `npm run mocha` to run the database test suite that listens for changes.
+
+In a new terminal, run `npm run backend-server` to serve the API layer that listens for changes.
 
 ## Build
 

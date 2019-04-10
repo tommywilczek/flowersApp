@@ -8,6 +8,7 @@
     "test": "ng test",
     "test-headless": "ng test --watch=false --browsers=ChromeHeadless",
     "mocha": "nodemon --exec 'mocha Server/test -R min'",
+    "backend-server": "nodemon Server/server.js",
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
