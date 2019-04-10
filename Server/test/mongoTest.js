@@ -5,7 +5,7 @@ const Schema = mongoose.Schema;
 const chai = require('chai');
 const expect = chai.expect;
 
-const flowersModel = require('../models/flowers');
+const flowersModel = require('../models/flowerModel');
 
 //tell mongoose to use es6 implementation of promises
 mongoose.Promise = global.Promise;

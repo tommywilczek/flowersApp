@@ -2,9 +2,17 @@ const express = require('express');
 const app = express();
 const morgan = require('morgan'); // for logging in the console what APIs are hit
 const bodyParser = require('body-parser'); // for parsing JSON and URL encoded 
+const mongoose = require('mongoose');
 
 const flowersRoutes = require('./routes/flowers');
 const orderRoutes = require('./routes/orders');
+
+mongoose.connect('mongodb+srv://flowersUser:' + 
+                process.env.MONGO_ATLAS_PWD + 
+                '@flowers-cluster-8eq0y.mongodb.net/test?retryWrites=true', 
+                {
+                    // useMongoClient: true
+                });
 
 app.use(morgan('dev'));
 app.use(bodyParser.urlencoded({extended: false}));
@@ -17,6 +25,7 @@ app.use((req, res, next) => {
         res.header('Access-Control-Allow-Methods', 'GET, PUT, POST, PATCH, DELETE');
         return res.status(200).json({});
     }
+    next(); // calling at the end of middleware so other routes can take over
 });
 
 // Routes which should handle requests

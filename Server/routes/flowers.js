@@ -1,5 +1,8 @@
 const express = require('express');
 const router = express.Router();
+const mongoose = require('mongoose');
+
+const Flower = require('../models/flowerModel');
 
 router.get('/', (req, res, next) => {
     res.status(200).json({
@@ -8,10 +11,15 @@ router.get('/', (req, res, next) => {
 });
 
 router.post('/', (req, res, next) => {
-    const newFlower = {
+    const newFlower = new Flower({
+        _id: new mongoose.Types.ObjectId(),
         name: req.body.name,
         price: req.body.price
-    }
+    });
+    newFlower.save().then(result => {
+        console.log(result);
+    })
+    .catch(err => console.log(err));
     res.status(201).json({
         message: 'Handling POST Requests to /flowers',
         createdFlower: newFlower 
