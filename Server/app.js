@@ -7,11 +7,9 @@ const mongoose = require('mongoose');
 const flowersRoutes = require('./routes/flowers');
 const orderRoutes = require('./routes/orders');
 
-mongoose.connect('mongodb+srv://flowersUser:' + 
-                process.env.MONGO_ATLAS_PWD + 
-                '@flowers-cluster-8eq0y.mongodb.net/test?retryWrites=true', 
+mongoose.connect('mongodb+srv://flowersUser:flowersUserPassword@flowers-cluster-8eq0y.mongodb.net/test?retryWrites=true', 
                 {
-                    // useMongoClient: true
+                    useNewUrlParser: true 
                 });
 
 app.use(morgan('dev'));

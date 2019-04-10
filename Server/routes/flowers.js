@@ -16,10 +16,12 @@ router.post('/', (req, res, next) => {
         name: req.body.name,
         price: req.body.price
     });
-    newFlower.save().then(result => {
-        console.log(result);
-    })
-    .catch(err => console.log(err));
+    newFlower
+        .save()
+        .then(result => {
+            console.log(result);
+        })
+        .catch(err => console.log(err));
     res.status(201).json({
         message: 'Handling POST Requests to /flowers',
         createdFlower: newFlower 
@@ -28,17 +30,17 @@ router.post('/', (req, res, next) => {
 
 router.get('/:flowerId', (req, res, next) => {
     const id = req.params.flowerId;
-    if (id === 'special') {
-        res.status(200).json({
-            message: 'You discovered the special ID',
-            id: id
-        });
-    } else {
-        res.status(200).json({
-            message: 'You Passed an ID'
-        });
-    }
-});
+    Flower.findById(id)
+    .exec()
+    .then(doc => {
+        console.log("from database", doc);
+        res.status(200).json(doc)
+    })
+    .catch(err => {
+        console.log(err);
+        res.status(500).json({error: err});
+    });
+}); 
 
 router.patch('/:flowerId', (req, res, next) => {
     res.status(200).json({
