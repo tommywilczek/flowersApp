@@ -39,6 +39,17 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
+## The Database
+
+Mongo Atlas is Mongo's cloud database. The Flowers database is managed through Mongo Atlas and hosted on AWS. 
+
+![mongo dashboard](pictures/mongoAtlasDashboard.png)
+*Mongo Atlas has interesting analytics about the usage of the used database*
+
+### Mongoose
+
+The Mongo client used is *Mongoose*, which provides a straight-forward, schema-based solution to model application data. It includes built-in type casting, validation, query building, business logic hooks and more, out of the box.
+
 ## Running end-to-end tests
 
 Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
