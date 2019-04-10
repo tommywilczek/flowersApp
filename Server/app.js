@@ -1,6 +1,10 @@
+const express = require('express');
+const app = express();
 
-module.exports = {
-    myFunction: function(variable) {
-        return(variable);
-    }
-}
+app.use((req, res, next) => {
+    res.status(200).json({
+        message: 'it works!'
+    });
+});
+
+module.exports = app;
