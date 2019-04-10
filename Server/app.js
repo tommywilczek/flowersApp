@@ -10,6 +10,15 @@ app.use(morgan('dev'));
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 
+app.use((req, res, next) => {
+    res.header('Access-Control-Allow-Origin', '*'); // allow server and client ports to communicate w each other without CORS error (a security mechanism from the browser)
+    res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, Authorization') // Defining what kind of headers we want to accept
+    if (req.method === 'OPTIONS') {
+        res.header('Access-Control-Allow-Methods', 'GET, PUT, POST, PATCH, DELETE');
+        return res.status(200).json({});
+    }
+});
+
 // Routes which should handle requests
 app.use('/flowers', flowersRoutes);
 app.use('/orders', orderRoutes);
