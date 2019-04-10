@@ -27,5 +27,16 @@ router.get('/:flowerId', (req, res, next) => {
     }
 });
 
+router.patch('/:flowerId', (req, res, next) => {
+    res.status(200).json({
+        message: 'Updated product!'
+    });
+});
+
+router.delete('/:flowerId', (req, res, next) => {
+    res.status(200).json({
+        message: 'Deleted product!'
+    });
+});
 
 module.exports = router;
