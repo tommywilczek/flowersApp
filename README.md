@@ -1,6 +1,6 @@
 # FlowersApp
 
-The FlowersApp is a simple CRUD Angular App that connects to a Mongo database. It is an exercise in following best practices used in modern, professional development teams.
+The FlowersApp is a simple CRUD web app using the MEAN stack (Mongo, Express, Angluar, and Node). It is an exercise in following best practices used in modern, professional development teams.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.2.2.
 

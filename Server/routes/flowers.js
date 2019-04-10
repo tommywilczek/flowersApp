@@ -23,7 +23,8 @@ router.post('/', (req, res, next) => {
     const newFlower = new Flower({
         _id: new mongoose.Types.ObjectId(),
         name: req.body.name,
-        price: req.body.price
+        price: req.body.price,
+        any: req.body.any
     });
     newFlower
         .save()
@@ -81,7 +82,7 @@ router.patch('/:flowerId', (req, res, next) => {
 // [
 // 	{
 //     	"propName": "name",
-//     	"value:": "thorny rose"
+//     	"value": "thorny rose"
 // 	}
 // ]
 
