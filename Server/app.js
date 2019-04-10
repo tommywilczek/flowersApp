@@ -1,10 +1,8 @@
 const express = require('express');
 const app = express();
 
-app.use((req, res, next) => {
-    res.status(200).json({
-        message: 'it works!'
-    });
-});
+const flowersRoutes = require('./routes/flowers');
+
+app.use('/flowers', flowersRoutes);
 
 module.exports = app;
