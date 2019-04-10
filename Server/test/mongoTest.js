@@ -40,7 +40,6 @@ describe('Create', () => {
 });
 
 describe('Read', () => {
-
   it('finds a flower with the name `testFlower`', (done) => {
     const newFlower = new flowersModel({ name: 'testFlower'});
     newFlower.save()
@@ -51,4 +50,3 @@ describe('Read', () => {
       });
   });
 });
-
