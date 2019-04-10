@@ -59,11 +59,8 @@ router.get('/:flowerId', (req, res, next) => {
 
 router.patch('/:flowerId', (req, res, next) => {
     const id = req.params.flowerId // extract the ID from the URL (the :flowerId)
-    const updateOps = {};
-    for(const ops of req.body) {
-        updateOps[ops.propName] = ops.value;
-    }
-    Flower.update({ _id: id }, { $set: updateOps}) // $set is a Mongoose thing
+    const updatedFlower = req.body;
+    Flower.update({ _id: id }, { $set: updatedFlower})
     .exec()
     .then(result => {
         console.log(result);
