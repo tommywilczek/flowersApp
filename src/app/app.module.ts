@@ -7,11 +7,15 @@ import { AllMaterialModule } from './material-module';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ShowFlowersComponent } from './show-flowers/show-flowers.component';
+import { NavMenuComponent } from './nav-menu/nav-menu.component';
+import { CreateFlowerComponent } from './create-flower/create-flower.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ShowFlowersComponent
+    ShowFlowersComponent,
+    NavMenuComponent,
+    CreateFlowerComponent
   ],
   imports: [
     BrowserModule,

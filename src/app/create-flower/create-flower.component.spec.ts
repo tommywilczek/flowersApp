@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ShowFlowersComponent } from './show-flowers.component';
+import { CreateFlowerComponent } from './create-flower.component';
 
-describe('ShowFlowersComponent', () => {
-  let component: ShowFlowersComponent;
-  let fixture: ComponentFixture<ShowFlowersComponent>;
+describe('CreateFlowerComponent', () => {
+  let component: CreateFlowerComponent;
+  let fixture: ComponentFixture<CreateFlowerComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ShowFlowersComponent ]
+      declarations: [ CreateFlowerComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ShowFlowersComponent);
+    fixture = TestBed.createComponent(CreateFlowerComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
@@ -22,4 +22,4 @@ describe('ShowFlowersComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
-}); 
+});
