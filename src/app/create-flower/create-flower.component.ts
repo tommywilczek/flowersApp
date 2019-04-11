@@ -10,6 +10,6 @@ export class CreateFlowerComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-  } 
+  }
 
 }

@@ -24,4 +24,4 @@ describe('NavMenuComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
-}); 
+});

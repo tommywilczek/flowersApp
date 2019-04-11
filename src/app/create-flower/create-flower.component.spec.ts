@@ -1,6 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { CreateFlowerComponent } from './create-flower.component';
+import { AllMaterialModule } from '../material-module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 describe('CreateFlowerComponent', () => {
   let component: CreateFlowerComponent;
@@ -8,6 +10,7 @@ describe('CreateFlowerComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [AllMaterialModule, BrowserAnimationsModule],
       declarations: [ CreateFlowerComponent ]
     })
     .compileComponents();
@@ -21,5 +24,12 @@ describe('CreateFlowerComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  describe('Text Fields', function() {
+    it('should display a name field before any other fields', function() {
+      const firstField = document.getElementsByTagName("input")[0].getAttribute("placeholder")
+      expect(firstField.toLowerCase()).toContain('name');
+    });
   });
 });
