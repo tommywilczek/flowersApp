@@ -35,9 +35,20 @@ describe('CreateFlowerComponent', () => {
       const secondField = document.getElementsByTagName('input')[1].getAttribute('placeholder');
       expect(secondField.toLowerCase()).toContain('price');
     });
+  });
+
+  describe('Buttons', function() {
     it('should display an add button', function() {
       const icon = document.getElementsByTagName('mat-icon')[0];
       expect(icon.innerHTML).toContain('add');
+    });
+    it('should clear all fields when the add button is clicked', function() {
+      // get an array of all input fields
+      const inputFields = document.getElementsByTagName('input');
+      // click add button
+      const icon = document.getElementsByTagName('mat-icon')[0];
+      // check if each input field's innerHTML is empty
+      // expect().toBe();
     });
   });
 });

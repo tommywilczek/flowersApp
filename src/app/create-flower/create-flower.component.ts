@@ -12,4 +12,8 @@ export class CreateFlowerComponent implements OnInit {
   ngOnInit() {
   }
 
+  add() {
+    console.log('added!');
+  }
+
 }
