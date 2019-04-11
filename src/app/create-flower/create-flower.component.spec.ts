@@ -28,7 +28,7 @@ describe('CreateFlowerComponent', () => {
 
   describe('Text Fields', function() {
     it('should display a name field before any other fields', function() {
-      const firstField = document.getElementsByTagName("input")[0].getAttribute("placeholder")
+      const firstField = document.getElementsByTagName('input')[0].getAttribute('placeholder');
       expect(firstField.toLowerCase()).toContain('name');
     });
   });
