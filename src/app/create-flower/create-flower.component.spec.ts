@@ -31,5 +31,13 @@ describe('CreateFlowerComponent', () => {
       const firstField = document.getElementsByTagName('input')[0].getAttribute('placeholder');
       expect(firstField.toLowerCase()).toContain('name');
     });
+    it('should display a price field second', function() {
+      const secondField = document.getElementsByTagName('input')[1].getAttribute('placeholder');
+      expect(secondField.toLowerCase()).toContain('price');
+    });
+    it('should display an add button', function() {
+      const icon = document.getElementsByTagName('mat-icon')[0];
+      expect(icon.innerHTML).toContain('add');
+    });
   });
 });
