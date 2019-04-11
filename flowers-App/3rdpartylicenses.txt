@@ -368,7 +368,9 @@ MIT
 @angular/router
 MIT
 
-@angular/material/icon
+@angular/material/form-field
+
+@angular/material/toolbar
 
 zone.js
 MIT
