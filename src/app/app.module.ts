@@ -11,7 +11,7 @@ import { NavMenuComponent } from './nav-menu/nav-menu.component';
 import { CreateFlowerComponent } from './create-flower/create-flower.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { DynamicFieldComponent } from './dynamic-field/dynamic-field.component';
+import { DynamicFieldComponent } from './dynamic-fields/dynamic-field/dynamic-field.component';
 
 @NgModule({
   declarations: [
