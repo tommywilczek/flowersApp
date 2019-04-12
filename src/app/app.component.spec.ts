@@ -4,13 +4,16 @@ import { AppComponent } from './app.component';
 import { ShowFlowersComponent } from './show-flowers/show-flowers.component';
 import { AllMaterialModule } from './material-module';
 import { NavMenuComponent } from './nav-menu/nav-menu.component';
+import { FormGroup, ReactiveFormsModule } from '@angular/forms';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [
         RouterTestingModule,
-        AllMaterialModule
+        AllMaterialModule,
+        FormGroup,
+        ReactiveFormsModule
       ],
       declarations: [
         AppComponent,

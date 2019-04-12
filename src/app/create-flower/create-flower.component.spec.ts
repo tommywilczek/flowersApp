@@ -3,6 +3,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { CreateFlowerComponent } from './create-flower.component';
 import { AllMaterialModule } from '../material-module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormGroup } from '@angular/forms';
 
 describe('CreateFlowerComponent', () => {
   let component: CreateFlowerComponent;
@@ -10,7 +11,7 @@ describe('CreateFlowerComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [AllMaterialModule, BrowserAnimationsModule],
+      imports: [AllMaterialModule, BrowserAnimationsModule, FormGroup],
       declarations: [ CreateFlowerComponent ]
     })
     .compileComponents();
@@ -49,7 +50,7 @@ describe('CreateFlowerComponent', () => {
       const icon: HTMLElement = document.getElementsByTagName('mat-icon')[0] as HTMLElement;
       icon.click();
       // check if each input field's innerHTML is empty
-      
+
       // expect().toBe();
     });
   });
