@@ -9,19 +9,25 @@ import { AppComponent } from './app.component';
 import { ShowFlowersComponent } from './show-flowers/show-flowers.component';
 import { NavMenuComponent } from './nav-menu/nav-menu.component';
 import { CreateFlowerComponent } from './create-flower/create-flower.component';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { DynamicFieldComponent } from './dynamic-field/dynamic-field.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ShowFlowersComponent,
     NavMenuComponent,
-    CreateFlowerComponent
+    CreateFlowerComponent,
+    DynamicFieldComponent
   ],
   imports: [
     BrowserModule,
     AllMaterialModule,
     BrowserAnimationsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

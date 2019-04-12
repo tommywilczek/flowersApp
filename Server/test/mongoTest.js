@@ -23,12 +23,12 @@ mongoose.connection
 //     }); 
 // });
 
-// afterEach(() => {
-//   // mongoose.connection.collections['flowers'].drop()
-//   mongoose.connection.db.dropDatabase();
-// }); 
+afterEach(() => {
+  // mongoose.connection.collections['flowers'].drop()
+  mongoose.connection.db.dropDatabase();
+}); 
 
-describe('Create', () => {
+describe('Create', () => { // redundant
   it('creates a flower', (done) => {
     const newFlower = new flowersModel({ name: 'Bluebonnet'});
     newFlower.save()
@@ -36,7 +36,7 @@ describe('Create', () => {
                 assert(!newFlower.isNew);
                 done();
               });
-  });
+  });// create the new flower, then read it separately
 });
 
 describe('Read', () => {

@@ -46,8 +46,10 @@ describe('CreateFlowerComponent', () => {
       // get an array of all input fields
       const inputFields = document.getElementsByTagName('input');
       // click add button
-      const icon = document.getElementsByTagName('mat-icon')[0];
+      const icon: HTMLElement = document.getElementsByTagName('mat-icon')[0] as HTMLElement;
+      icon.click();
       // check if each input field's innerHTML is empty
+      
       // expect().toBe();
     });
   });
