@@ -1,5 +1,5 @@
 dynamic form field component start
-<div *ngIf="field" [formGroup]="form">
+<div [formGroup]="form">
   <label [attr.for]="field.key">{{field.label}}</label>
 
   <div [ngSwitch]="field.controlType">
