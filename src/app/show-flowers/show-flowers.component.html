@@ -1,22 +1,19 @@
-<div *ngIf="flowers.length===0">
+<div *ngIf="displayFlowers.length===0">
   <mat-card>
     No flowers to display.
   </mat-card>
 </div>
-<ul *ngFor="let flower of flowers" style="list-style: none;">
-  <li>
-    <mat-card>
-      <pre>
-          {{flower | json}}
-      </pre>
-      <button (click)="deleteFlower(flower)" mat-fab color="primary">
-        <mat-icon>
-          delete
-        </mat-icon>
-      </button>
-    </mat-card>
-    <mat-divider></mat-divider>
-  </li>
-</ul>
 
-<button (click)="extractJsonKeys(flowers)">DOH</button>
+<ul *ngFor="let displayFlower of displayFlowers" style="list-style: none">
+  <li *ngFor="let opt of displayFlower.options">
+    <ng-container *ngIf="opt.key !== '_id'">
+      <strong>{{opt.key}}: </strong>{{opt.value}}
+    </ng-container>
+  </li>
+  <button (click)="deleteFlower(displayFlower)" mat-fab color="primary">
+      <mat-icon>
+        delete
+      </mat-icon>
+    </button>
+    <hr>
+</ul>

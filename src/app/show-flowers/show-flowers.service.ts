@@ -12,8 +12,8 @@ export class ShowFlowersService {
     return this.http.get('/api/flowers');
     }
   
-  deleteFlower(flower) {
-    return this.http.delete('/api/flowers/' + flower._id);
+  deleteFlower(flowerId) {
+    return this.http.delete('/api/flowers/' + flowerId);
   }
 
 }
