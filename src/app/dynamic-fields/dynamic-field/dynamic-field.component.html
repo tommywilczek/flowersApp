@@ -3,7 +3,7 @@
 
   <div [ngSwitch]="field.controlType">
     
-      <input *ngSwitchCase="'textbox'" [formControlName]="field.key"
+      <input *ngSwitchCase="'textbox'" [formControlName]="field.key" 
               [id]="field.key" [type]="field.type">
 
     <select [id]="field.key" *ngSwitchCase="'dropdown'" [formControlName]="field.key">

@@ -14,6 +14,7 @@ export class FieldServiceService {
       new FieldTextbox({
         key: 'name',
         label: 'Flower Name',
+        required:true,
         order: 1
       }),
       new FieldTextbox({
