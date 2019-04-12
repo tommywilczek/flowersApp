@@ -27,8 +27,9 @@ export class CreateFlowerComponent implements OnInit {
   }
 
   onSubmit() {
+    const flower = {}
     this.payLoad = JSON.stringify(this.form.value);
-    this.createFlowerService.addFlower('')
+    this.createFlowerService.addFlower(this.form.value);
     document.getElementsByTagName('form')[0].reset();
   }
 

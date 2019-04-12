@@ -9,11 +9,21 @@ export class CreateFlowerService {
   constructor(private http: HttpClient) { }
 
   addFlower(flower) {
-    console.log('Attempting to add flower');
+    const name = flower.name;
+    const price = flower.price;
+    const extraFields = this.codifyFlower(flower);
+    console.log('price:', price);
+    console.log('Attempting to add flower,', flower);
     return this.http.post('/api/flowers', {
-      name: "Hola from Angular"
+      name, price, extraFields
     }).subscribe(res => {
       console.log(res);
     });
+  }
+
+  codifyFlower(flower) {
+    delete flower.name;
+    delete flower.price;
+    return flower;
   }
 }
