@@ -1,22 +1,3 @@
-<!-- <form class="create-flower-form">
-    <mat-form-field class="full-width">
-      <input matInput placeholder="Flower Name" value="">
-    </mat-form-field>
-    <mat-form-field class="full-width">
-        <input matInput placeholder="Price" value="">
-    </mat-form-field>
-</form>
-
-  <button 
-    (click)="add()"
-    mat-fab color="primary">
-    <mat-icon>add</mat-icon>
-  </button>
-
-  <br> -->
-
-Dynamic:
-dynamic form component start
 <div>
   <form (ngSubmit)="onSubmit()" [formGroup]="form">
 
@@ -33,4 +14,3 @@ dynamic form component start
     <strong>Saved the following values</strong><br>{{payLoad}}
   </div>
 </div>
-dynamic form component END

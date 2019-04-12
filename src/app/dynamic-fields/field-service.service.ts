@@ -13,25 +13,25 @@ export class FieldServiceService {
     let fields: FieldBase<any>[] = [
       new FieldTextbox({
         key: 'name',
-        label: 'DYNAMIC Flower Name',
+        label: 'Flower Name',
         order: 1
       }),
       new FieldTextbox({
         key: 'price',
-        label: 'DYNAMIC Flower Price',
+        label: 'Flower Price',
         order: 2
       }),
-      new FieldDropdown({
-        key: 'brave',
-        label: 'Bravery Rating',
-        options: [
-          {key: 'solid',  value: 'Solid'},
-          {key: 'great',  value: 'Great'},
-          {key: 'good',   value: 'Good'},
-          {key: 'unproven', value: 'Unproven'}
-        ],
-        order: 3
-      }),
+      // new FieldDropdown({
+      //   key: 'smell',
+      //   label: 'Smell',
+      //   options: [
+      //     {key: 'sweet',  value: 'Sweet'},
+      //     {key: 'floral',  value: 'Floral'},
+      //     {key: 'good',   value: 'Good'},
+      //     {key: 'bad', value: 'Bad'}
+      //   ],
+      //   order: 3
+      // }),
     ];
 
     return fields.sort((a, b) => a.order - b.order);
