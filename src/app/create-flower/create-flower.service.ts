@@ -10,8 +10,10 @@ export class CreateFlowerService {
 
   addFlower(flower) {
     console.log('Attempting to add flower');
-    return this.http.post('/flowers', {
-      "name": "Rose"
+    return this.http.post('/api/flowers', {
+      name: "Hola from Angular"
+    }).subscribe(res => {
+      console.log(res);
     });
   }
 }

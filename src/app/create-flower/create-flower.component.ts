@@ -32,8 +32,5 @@ export class CreateFlowerComponent implements OnInit {
     document.getElementsByTagName('form')[0].reset();
   }
 
-  add() {
-
-  }
 
 }
