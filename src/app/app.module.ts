@@ -9,7 +9,7 @@ import { AppComponent } from './app.component';
 import { ShowFlowersComponent } from './show-flowers/show-flowers.component';
 import { NavMenuComponent } from './nav-menu/nav-menu.component';
 import { CreateFlowerComponent } from './create-flower/create-flower.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { DynamicFieldComponent } from './dynamic-field/dynamic-field.component';
 
@@ -27,7 +27,8 @@ import { DynamicFieldComponent } from './dynamic-field/dynamic-field.component';
     BrowserAnimationsModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
