@@ -22,22 +22,22 @@ export class FieldServiceService {
         label: 'Flower Price',
         order: 2
       }),
-      // new FieldDropdown({
-      //   key: 'smell',
-      //   label: 'Smell',
-      //   options: [
-      //     {key: 'sweet',  value: 'Sweet'},
-      //     {key: 'floral',  value: 'Floral'},
-      //     {key: 'good',   value: 'Good'},
-      //     {key: 'bad', value: 'Bad'}
-      //   ],
-      //   order: 3
-      // }),
-      // new FieldTextbox({
-      //   key: 'height',
-      //   label: 'Height',
-      //   order: 4
-      // }),
+      new FieldDropdown({
+        key: 'smell',
+        label: 'Smell',
+        options: [
+          {key: 'sweet',  value: 'Sweet'},
+          {key: 'floral',  value: 'Floral'},
+          {key: 'good',   value: 'Good'},
+          {key: 'bad', value: 'Bad'}
+        ],
+        order: 3
+      }),
+      new FieldTextbox({
+        key: 'height',
+        label: 'Height',
+        order: 4
+      }),
     ];
 
     return fields.sort((a, b) => a.order - b.order);

@@ -13,7 +13,7 @@ export class ShowFlowersComponent implements OnInit {
 
   public flowers: any[];
 
-  public displayFlower: DisplayFlower;
+  public displayFlower: DisplayFlower<any>;
 
   public displayFlowers: any[];
 
@@ -26,8 +26,7 @@ export class ShowFlowersComponent implements OnInit {
 
   getAllFlowers() {
     this.showFlowersService.getAllFlowers().subscribe(res => {
-      this.flowers = res;
-      this.createDisplayFlowers(this.flowers);
+      this.createDisplayFlowers(res);
     })
   }
 

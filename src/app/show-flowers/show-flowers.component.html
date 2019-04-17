@@ -1,8 +1,8 @@
-<div *ngIf="displayFlowers.length===0">
+<!-- <div *ngIf="!displayFlowers">
   <mat-card>
     No flowers to display.
   </mat-card>
-</div>
+</div> -->
 
 <ul *ngFor="let displayFlower of displayFlowers" style="list-style: none">
   <li *ngFor="let opt of displayFlower.options">
